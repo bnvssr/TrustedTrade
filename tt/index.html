@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Trusted Trade - prototype</title>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src='app.js'></script>
+    </head>
+    <body>
+        <h1>Trusted Trade</h1>
+        <div id='customer'>
+            <label>Customer:</label>				
+			<select name="customer" >
+				<option selected="selected" value="none">...</option>
+				<option value="Customer 1">Customer 1</option>
+				<option value="Customer 2">Customer 2</option>
+				<option value="Customer 3">Customer 3</option>
+			</select>
+        </div>
+		
+        <div id='verkoper'>
+            <label>Verkoper:</label>
+			<select name="verkoper">
+				<option selected="selected" value="none">...</option>
+				<option value="Verkoper 1">Verkoper 1</option>
+				<option value="Verkoper 2">Verkoper 2</option>
+				<option value="Verkoper 3">Verkoper 3</option>
+ 			</select>
+        </div>
+		
+        <div id='asset'>
+            <label>Asset:</label>
+			<select name="asset">
+					<option selected="selected" value="none">...</option>
+                    <option value="Asset 1">Asset 1</option>
+                    <option value="Asset 2">Asset 2</option>
+                    <option value="Asset 3">Asset 3</option>
+ 			</select>
+        </div>
+		
+        <div id='status'>
+            <label>Status:</label>
+ 			<select name="status">
+					<option selected="selected" value="none">...</option>
+                    <option value="nieuw">nieuw</option>
+                    <option value="onderweg">onderweg</option>
+                    <option value="gesloten">gesloten</option>
+  			</select>
+        </div>
+        
+        <input type="submit" onclick='createContract()' value="Create contract">
+        
+        <input type="submit" onclick='updateContract()' value="Update contract">
+        
+        <input type="submit" onclick='closeContract()' value="Close contract">
+
+        <div id='response' class='resp'>
+        
+        </div>
+    </body>
+</html>

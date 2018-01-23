@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="trusted-trade-contract-handling;create-new-contract" tests="8" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@create" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;create-new-contract" time="0.000493391">
+        </testcase>
+        <testcase name="Then the page title is &quot;Trusted Trade - prototype&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="5.757592031">
+        </testcase>
+        <testcase name="Given all input field are empty" classname="trusted-trade-contract-handling;create-new-contract" time="0.029939246">
+        </testcase>
+        <testcase name="When I enter &quot;Customer 1&quot; as customer name" classname="trusted-trade-contract-handling;create-new-contract" time="0.025887646">
+        </testcase>
+        <testcase name="And I enter &quot;Verkoper 1&quot; as verkoper naam" classname="trusted-trade-contract-handling;create-new-contract" time="0.000070747">
+        </testcase>
+        <testcase name="And I enter &quot;Asset 1&quot; as asset identifier" classname="trusted-trade-contract-handling;create-new-contract" time="0.000063781">
+        </testcase>
+        <testcase name="When I trigger &quot;create contract&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="0.000067814">
+        </testcase>
+        <testcase name="Then the status changes to &quot;nieuw&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="0.000064882">
+        </testcase>
+    </testsuite>
+</testsuites>

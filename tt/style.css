@@ -1,0 +1,13 @@
+label{
+	display:block;
+	float:left;
+	width:100px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+select {
+	width:200px;
+}

@@ -1,0 +1,12 @@
+{
+    "name": "",
+    "devDependencies": {
+        "cucumber": "^3.2.1",
+        "selenium-cucumber-js": "^1.5.11"
+    },
+    "version": "",
+    "scripts": {
+        "//": "Use '-- --tags ~@search' to run all but @search",
+        "test": "node ./node_modules/selenium-cucumber-js/index.js -s step-definitions"
+    }
+}

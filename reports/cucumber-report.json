@@ -1,0 +1,153 @@
+[
+  {
+    "description": "    As a ... \n    I want to ...\n    So that ...",
+    "elements": [
+      {
+        "id": "trusted-trade-contract-handling;create-new-contract",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "create new contract",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 493391
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:3"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the page title is \"Trusted Trade - prototype\"",
+            "result": {
+              "status": "passed",
+              "duration": 5757592031
+            },
+            "line": 9,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:85"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "all input field are empty",
+            "result": {
+              "status": "passed",
+              "duration": 29939246
+            },
+            "line": 13,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I enter \"Customer 1\" as customer name",
+            "result": {
+              "status": "passed",
+              "duration": 25887646
+            },
+            "line": 14,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:51"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I enter \"Verkoper 1\" as verkoper naam",
+            "result": {
+              "status": "passed",
+              "duration": 70747
+            },
+            "line": 15,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:65"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I enter \"Asset 1\" as asset identifier",
+            "result": {
+              "status": "passed",
+              "duration": 63781
+            },
+            "line": 16,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:69"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger \"create contract\"",
+            "result": {
+              "status": "passed",
+              "duration": 67814
+            },
+            "line": 17,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:73"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the status changes to \"nieuw\"",
+            "result": {
+              "status": "passed",
+              "duration": 64882
+            },
+            "line": 18,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:93"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 109976034
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@create",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "trusted-trade-contract-handling",
+    "keyword": "Feature",
+    "line": 2,
+    "name": "Trusted Trade contract handling",
+    "tags": [
+      {
+        "name": "@TrustedTradeCRUD",
+        "line": 1
+      }
+    ],
+    "uri": "C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature"
+  }
+]
