@@ -5,7 +5,7 @@
       {
         "id": "trusted-trade-contract-handling;create-new-contract",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 20,
         "name": "create new contract",
         "steps": [
           {
@@ -14,102 +14,76 @@
             "name": "I am at Trusted Trade",
             "result": {
               "status": "passed",
-              "duration": 493391
+              "duration": 5493110132
             },
             "line": 8,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:3"
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "name": "the page title is \"Trusted Trade - prototype\"",
+            "keyword": "When ",
+            "name": "I enter Customer 1 as customer name",
             "result": {
               "status": "passed",
-              "duration": 5757592031
+              "duration": 72538621
             },
-            "line": 9,
+            "line": 12,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:85"
+              "location": "Trade\\step-definitions\\crud-steps.js:24"
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "name": "all input field are empty",
+            "keyword": "And ",
+            "name": "I enter Verkoper 1 as verkoper name",
             "result": {
               "status": "passed",
-              "duration": 29939246
+              "duration": 68215042
             },
             "line": 13,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:8"
+              "location": "Trade\\step-definitions\\crud-steps.js:30"
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
-            "name": "I enter \"Customer 1\" as customer name",
+            "keyword": "And ",
+            "name": "I enter Asset 1 as asset identifier",
             "result": {
               "status": "passed",
-              "duration": 25887646
+              "duration": 64586095
             },
             "line": 14,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:51"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "name": "I enter \"Verkoper 1\" as verkoper naam",
-            "result": {
-              "status": "passed",
-              "duration": 70747
-            },
-            "line": 15,
-            "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:65"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "name": "I enter \"Asset 1\" as asset identifier",
-            "result": {
-              "status": "passed",
-              "duration": 63781
-            },
-            "line": 16,
-            "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:69"
+              "location": "Trade\\step-definitions\\crud-steps.js:36"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "name": "I trigger \"create contract\"",
+            "name": "I trigger Create contract",
             "result": {
               "status": "passed",
-              "duration": 67814
+              "duration": 69027706
             },
-            "line": 17,
+            "line": 15,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:73"
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "name": "the status changes to \"nieuw\"",
+            "name": "the status changes to nieuw",
             "result": {
               "status": "passed",
-              "duration": 64882
+              "duration": 26501578
             },
-            "line": 18,
+            "line": 16,
             "match": {
-              "location": "Trade\\step-definitions\\crud-steps.js:93"
+              "location": "Trade\\step-definitions\\crud-steps.js:48"
             }
           },
           {
@@ -117,7 +91,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 109976034
+              "duration": 118301477
             },
             "hidden": true,
             "match": {
@@ -132,7 +106,588 @@
           },
           {
             "name": "@create",
-            "line": 11
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;update-nieuw-contract",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "update nieuw contract",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4414586315
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by Customer 1 from Verkoper 1 with status nieuw",
+            "result": {
+              "status": "passed",
+              "duration": 830625
+            },
+            "line": 24,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Update contract",
+            "result": {
+              "status": "passed",
+              "duration": 282322555
+            },
+            "line": 25,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the status changes to onderweg",
+            "result": {
+              "status": "passed",
+              "duration": 22152706
+            },
+            "line": 26,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:48"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 110718077
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@update",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;update-nieuw-contract",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "update nieuw contract",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4090655864
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg",
+            "result": {
+              "status": "passed",
+              "duration": 670073
+            },
+            "line": 24,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Update contract",
+            "result": {
+              "status": "passed",
+              "duration": 287550439
+            },
+            "line": 25,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the status changes to onderweg",
+            "result": {
+              "status": "passed",
+              "duration": 21486666
+            },
+            "line": 26,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:48"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 114986672
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@update",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;close-contract",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "close contract",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4077778967
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg",
+            "result": {
+              "status": "passed",
+              "duration": 707462
+            },
+            "line": 35,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Close contract",
+            "result": {
+              "status": "passed",
+              "duration": 298734194
+            },
+            "line": 36,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the status changes to gesloten",
+            "result": {
+              "status": "passed",
+              "duration": 22623736
+            },
+            "line": 37,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:48"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 116548585
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@close",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;error-messages",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "Error messages",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4033742244
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by none from Verkoper 1 with status nieuw",
+            "result": {
+              "status": "passed",
+              "duration": 601159
+            },
+            "line": 47,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Create contract",
+            "result": {
+              "status": "passed",
+              "duration": 285827605
+            },
+            "line": 48,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the Geen Customer gegeven! is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 33150615
+            },
+            "line": 49,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:54"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 115985182
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@errors",
+            "line": 45
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;error-messages",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "Error messages",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4062778219
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by Customer 1 from none with status nieuw",
+            "result": {
+              "status": "passed",
+              "duration": 726522
+            },
+            "line": 47,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Create contract",
+            "result": {
+              "status": "passed",
+              "duration": 274109772
+            },
+            "line": 48,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the Geen Verkoper gegeven! is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 30501850
+            },
+            "line": 49,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:54"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 133937107
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@errors",
+            "line": 45
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;error-messages",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "Error messages",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 3997689204
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the none, sold by Customer 1 from Verkoper 1 with status nieuw",
+            "result": {
+              "status": "passed",
+              "duration": 574033
+            },
+            "line": 47,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Create contract",
+            "result": {
+              "status": "passed",
+              "duration": 304610522
+            },
+            "line": 48,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the Geen Asset gegeven! is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 43723314
+            },
+            "line": 49,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:54"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 152073778
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@errors",
+            "line": 45
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "trusted-trade-contract-handling;error-messages",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "Error messages",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am at Trusted Trade",
+            "result": {
+              "status": "passed",
+              "duration": 4301642483
+            },
+            "line": 8,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg",
+            "result": {
+              "status": "passed",
+              "duration": 683635
+            },
+            "line": 47,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I trigger Update contract",
+            "result": {
+              "status": "passed",
+              "duration": 287303011
+            },
+            "line": 48,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:42"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the Ongeldige Status! is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 31613994
+            },
+            "line": 49,
+            "match": {
+              "location": "Trade\\step-definitions\\crud-steps.js:54"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 115402351
+            },
+            "hidden": true,
+            "match": {
+              "location": "Trade\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TrustedTradeCRUD",
+            "line": 1
+          },
+          {
+            "name": "@errors",
+            "line": 45
           }
         ],
         "type": "scenario"

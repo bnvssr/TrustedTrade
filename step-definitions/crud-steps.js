@@ -1,105 +1,60 @@
+// ./step-definitions/trusted-trade.js
+
 module.exports = function () {
+    
+    this.BeforeScenario(function(scenario, done) {
+//        console.log('BeforeScenario: ' + scenario.getName());
+        done();
+    });
+    
+    this.Given(/^the (.*), sold by (.*) from (.*) with status (.*)$/, function(asset, customer, verkoper, status, done){
+        page.trustedTrade.enterCustomer(customer);
+        page.trustedTrade.enterVerkoper(verkoper);
+        page.trustedTrade.enterAsset(asset);
+        page.trustedTrade.enterStatus(status);
+        done();
+    });
 
     this.Given(/^I am at Trusted Trade$/, function () {
-        // load Trusted Trade
-        helpers.loadPage(page.trustedTrade.url);
-    });
-
-    this.Given(/^all input field are empty$/, function () {
-
-        // driver.wait returns a promise
-        return driver.wait(until.elementsLocated(by.name('customer')), 10000)
-        .then(function(){
-            // return the promise of an element to the following then.
-            return driver.findElements(by.name('customer'));
-        })
-        .then(function (elements) {
-            // make sure all elements are empty
-            elements.map(function(element, index){
-//                element.innerHTML("");
-                if (index === 0) {
-//                    console.log(element);
-                }
-            });
-        });
-    });
-
-    this.Given(/^the customer is "Customer 1"$/, function () {
-        // TODO
-        driver.findElement(by.name('customer'))
-        .then(function(element){
-            console.log("text returned element: ", element);
-        });
-    });
-    
-    this.Given(/^the verkoper is "Verkoper 1"$/, function () {
-        // TODO
-    });
-    
-    this.Given(/^the asset is identified by "Asset 1"$/, function () {
-        // TODO
-    });
-    
-    this.Given(/^the status is "nieuw"$/, function () {
-        // TODO
-    });
-    
-    this.Given(/^the status is "onderweg"$/, function () {
-        // TODO
-    });
-    
-    this.When(/^I enter "Customer 1" as customer name$/, function () {
-       // driver.wait returns a promise
-        return driver.wait(until.elementsLocated(by.name('customer')), 10000)
-        .then(function(){
-            // return the promise of an element to the following then.
-            return driver.findElements(by.name('customer'));
-        })
-        .then(function (elements) {
-            console.log('customer 1');
-            console.log(elements[0].innerHTML);
-            elements[0].innerHTML = "Customer 1";
-        });        
-    });
-    
-    this.When(/^I enter "Verkoper 1" as verkoper naam$/, function () {
-        // TODO
-    });
-    
-    this.When(/^I enter "Asset 1" as asset identifier$/, function () {
-        // TODO
-    });
-    
-    this.When(/^I trigger "create contract"$/, function () {
-        // TODO
-    });    
-    
-    this.When(/^I trigger "update contract"$/, function () {
-        // TODO
-    });
-    
-    this.When(/^I trigger "close contract"$/, function () {
-        // TODO
-    });
-    
-    this.Then(/^the page title is "([^"]*)"$/, function (expectedTitle) {
+      
+        return page.trustedTrade.loadTrustedTradeAndVerify();
         
-        return driver.getTitle().
-        then(function(pageTitle) {
-            expect(pageTitle).to.equal(expectedTitle);
-        });    
     });
     
-    this.Then(/^the status changes to "nieuw"$/, function () {
-        // TODO
+    this.When(/^I enter (.*) as customer name$/, function(customer) {
+
+        return page.trustedTrade.enterCustomer(customer);
+        
     });
     
-    this.Then(/^the status changes to "onderweg"$/, function () {
-        // TODO
+    this.When(/^I enter (.*) as verkoper name$/, function (verkoper) {
+  
+        return page.trustedTrade.enterVerkoper(verkoper);
+   
     });
     
-    this.Then(/^the status changes to "gesloten"$/, function () {
-        // TODO
+    this.When(/^I enter (.*) as asset identifier$/, function (asset) {
+   
+        return page.trustedTrade.enterAsset(asset);
+   
+    });
+    
+    this.When(/^I trigger (.*)$/, function (caption) {
+        
+        return page.trustedTrade.clickButton(caption);
+        
+    });      
+    
+    this.Then(/^the status changes to (.*)$/, function (expectedStatus) {
+        
+        return page.trustedTrade.statusIs(expectedStatus);
+        
+    });
+    
+    this.Then(/^the (.*) is displayed$/, function(message){
+        
+        return page.trustedTrade.messageIs(message);
+        
     });
 
 };

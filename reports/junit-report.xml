@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="trusted-trade-contract-handling;create-new-contract" tests="8" failures="0" skipped="0">
+    <testsuite name="trusted-trade-contract-handling;create-new-contract" tests="6" failures="0" skipped="0">
         <properties>
             <property name="@TrustedTradeCRUD" value="true">
             </property>
@@ -9,21 +9,143 @@
             <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
             </property>
         </properties>
-        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;create-new-contract" time="0.000493391">
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;create-new-contract" time="5.493110132">
         </testcase>
-        <testcase name="Then the page title is &quot;Trusted Trade - prototype&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="5.757592031">
+        <testcase name="When I enter Customer 1 as customer name" classname="trusted-trade-contract-handling;create-new-contract" time="0.072538621">
         </testcase>
-        <testcase name="Given all input field are empty" classname="trusted-trade-contract-handling;create-new-contract" time="0.029939246">
+        <testcase name="And I enter Verkoper 1 as verkoper name" classname="trusted-trade-contract-handling;create-new-contract" time="0.068215042">
         </testcase>
-        <testcase name="When I enter &quot;Customer 1&quot; as customer name" classname="trusted-trade-contract-handling;create-new-contract" time="0.025887646">
+        <testcase name="And I enter Asset 1 as asset identifier" classname="trusted-trade-contract-handling;create-new-contract" time="0.064586095">
         </testcase>
-        <testcase name="And I enter &quot;Verkoper 1&quot; as verkoper naam" classname="trusted-trade-contract-handling;create-new-contract" time="0.000070747">
+        <testcase name="When I trigger Create contract" classname="trusted-trade-contract-handling;create-new-contract" time="0.069027706">
         </testcase>
-        <testcase name="And I enter &quot;Asset 1&quot; as asset identifier" classname="trusted-trade-contract-handling;create-new-contract" time="0.000063781">
+        <testcase name="Then the status changes to nieuw" classname="trusted-trade-contract-handling;create-new-contract" time="0.026501578">
         </testcase>
-        <testcase name="When I trigger &quot;create contract&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="0.000067814">
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;update-nieuw-contract" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@update" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;update-nieuw-contract" time="4.414586315">
         </testcase>
-        <testcase name="Then the status changes to &quot;nieuw&quot;" classname="trusted-trade-contract-handling;create-new-contract" time="0.000064882">
+        <testcase name="Given the Asset 1, sold by Customer 1 from Verkoper 1 with status nieuw" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.000830625">
+        </testcase>
+        <testcase name="When I trigger Update contract" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.282322555">
+        </testcase>
+        <testcase name="Then the status changes to onderweg" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.022152706">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;update-nieuw-contract" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@update" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;update-nieuw-contract" time="4.090655864">
+        </testcase>
+        <testcase name="Given the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.000670073">
+        </testcase>
+        <testcase name="When I trigger Update contract" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.287550439">
+        </testcase>
+        <testcase name="Then the status changes to onderweg" classname="trusted-trade-contract-handling;update-nieuw-contract" time="0.021486666">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;close-contract" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@close" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;close-contract" time="4.077778967">
+        </testcase>
+        <testcase name="Given the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg" classname="trusted-trade-contract-handling;close-contract" time="0.000707462">
+        </testcase>
+        <testcase name="When I trigger Close contract" classname="trusted-trade-contract-handling;close-contract" time="0.298734194">
+        </testcase>
+        <testcase name="Then the status changes to gesloten" classname="trusted-trade-contract-handling;close-contract" time="0.022623736">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;error-messages" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@errors" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;error-messages" time="4.033742244">
+        </testcase>
+        <testcase name="Given the Asset 1, sold by none from Verkoper 1 with status nieuw" classname="trusted-trade-contract-handling;error-messages" time="0.000601159">
+        </testcase>
+        <testcase name="When I trigger Create contract" classname="trusted-trade-contract-handling;error-messages" time="0.285827605">
+        </testcase>
+        <testcase name="Then the Geen Customer gegeven! is displayed" classname="trusted-trade-contract-handling;error-messages" time="0.033150615">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;error-messages" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@errors" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;error-messages" time="4.062778219">
+        </testcase>
+        <testcase name="Given the Asset 1, sold by Customer 1 from none with status nieuw" classname="trusted-trade-contract-handling;error-messages" time="0.000726522">
+        </testcase>
+        <testcase name="When I trigger Create contract" classname="trusted-trade-contract-handling;error-messages" time="0.274109772">
+        </testcase>
+        <testcase name="Then the Geen Verkoper gegeven! is displayed" classname="trusted-trade-contract-handling;error-messages" time="0.03050185">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;error-messages" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@errors" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;error-messages" time="3.997689204">
+        </testcase>
+        <testcase name="Given the none, sold by Customer 1 from Verkoper 1 with status nieuw" classname="trusted-trade-contract-handling;error-messages" time="0.000574033">
+        </testcase>
+        <testcase name="When I trigger Create contract" classname="trusted-trade-contract-handling;error-messages" time="0.304610522">
+        </testcase>
+        <testcase name="Then the Geen Asset gegeven! is displayed" classname="trusted-trade-contract-handling;error-messages" time="0.043723314">
+        </testcase>
+    </testsuite>
+    <testsuite name="trusted-trade-contract-handling;error-messages" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@TrustedTradeCRUD" value="true">
+            </property>
+            <property name="@errors" value="true">
+            </property>
+            <property name="URI" value="C:/Users/visserbe/dev/bdd/Trusted Trade/features/crud.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am at Trusted Trade" classname="trusted-trade-contract-handling;error-messages" time="4.301642483">
+        </testcase>
+        <testcase name="Given the Asset 1, sold by Customer 1 from Verkoper 1 with status onderweg" classname="trusted-trade-contract-handling;error-messages" time="0.000683635">
+        </testcase>
+        <testcase name="When I trigger Update contract" classname="trusted-trade-contract-handling;error-messages" time="0.287303011">
+        </testcase>
+        <testcase name="Then the Ongeldige Status! is displayed" classname="trusted-trade-contract-handling;error-messages" time="0.031613994">
         </testcase>
     </testsuite>
 </testsuites>
